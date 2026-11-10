@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import contactMailDarkImg from "../../assets/images/contactMailDark.svg";
 import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {illustration, contactInfo} from "../../portfolio";
@@ -56,10 +57,7 @@ export default function Contact() {
             {illustration.animated ? (
               <DisplayLottie animationData={email} />
             ) : (
-              <img
-                alt="Man working"
-                src={require("../../assets/images/contactMailDark.svg")}
-              ></img>
+              <img alt="Man working" src={contactMailDarkImg}></img>
             )}
           </div>
         </div>

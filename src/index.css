@@ -22,7 +22,7 @@ body {
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font: 18px / 1.6 "DM Sans", Montserrat, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,7 +30,28 @@ body {
 @media (max-width: 1380px) {
   html,
   body {
-    font-size: rem;
-    line-height: normal;
+    font-size: 16px;
   }
+}
+
+/* Headings use Sora; body text uses DM Sans (both loaded in public/index.html) */
+h1,
+h2,
+h3,
+h4,
+h5,
+.greeting-text,
+.logo-name,
+[class*="heading"],
+[class*="-title"] {
+  font-family: "Sora", "DM Sans", system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+::selection {
+  background: #cdeadf;
+  color: #0b3d2e;
+}
+:focus-visible {
+  outline: 2px solid #0f7a5c;
+  outline-offset: 3px;
 }

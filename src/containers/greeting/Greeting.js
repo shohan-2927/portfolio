@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import manOnTableImg from "../../assets/images/manOnTable.svg";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -56,10 +57,7 @@ export default function Greeting() {
             {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
             ) : (
-              <img
-                alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
-              ></img>
+              <img alt="man sitting on table" src={manOnTableImg}></img>
             )}
           </div>
         </div>

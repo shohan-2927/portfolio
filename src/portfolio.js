@@ -4,11 +4,16 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import genesisLogo from "./assets/images/shohan/genesis.png";
+import certPython from "./assets/images/shohan/cert-python.png";
+import certDp900 from "./assets/images/shohan/cert-dp900.png";
+import certDiffusion from "./assets/images/shohan/cert-diffusion.png";
+import certRapids from "./assets/images/shohan/cert-rapids.png";
 
 // Splash Screen
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false, // set false to disable splash screen
   animation: splashAnimation,
   duration: 2000 // Set animation duration as per your animation
 };
@@ -16,12 +21,12 @@ const splashScreen = {
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: false // Set to false to use static SVG
 };
 
 const greeting = {
   username: "shohan-2927",
-  title: "Hi all, I'm Shohan",
+  title: "Hi, I'm Shohan",
   subTitle: emoji(
     "I am an aspiring developer focused on building interactive, user-friendly digital experiences while diving deep into the foundations of modern artificial intelligence. Right now, I'm sharpening my web development skills to bring functional applications to life and mastering PyTorch to design, train, and experiment with intelligent neural networks."
   ),
@@ -46,13 +51,10 @@ const skillsSection = {
   title: "What I do",
   subTitle: "COMPUTER SCIENCE STUDENT LEARNING WEB DEVELOPMENT AND AI",
   skills: [
-    emoji(
-      "⚡ Build responsive websites with HTML, CSS, and JavaScript"
-    ),
-    emoji("⚡ Learning to connect web applications to databases"),
-    emoji(
-      "⚡ Experiment with neural networks using Python and PyTorch"
-    )
+    emoji("⚡ Build responsive websites with HTML, CSS, and JavaScript"),
+    emoji("⚡ Learning to connect web applications to databases with SQL"),
+    emoji("⚡ Experiment with neural networks using Python and PyTorch"),
+    emoji("⚡ Research AI-generated image detection with deep learning")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -76,12 +78,16 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "sql-database",
+      skillName: "C",
+      fontAwesomeClassname: "fas fa-code"
+    },
+    {
+      skillName: "SQL",
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "PyTorch",
+      fontAwesomeClassname: "fas fa-brain"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -96,7 +102,8 @@ const educationInfo = {
       schoolName: "University of Debrecen",
       subHeader: "Bachelor of Science in Computer Science",
       duration: "September 2025 - Present",
-      desc: "Studying core computer science topics including programming, discrete mathematics, operating systems, data structures and algorithms, and databases."
+      desc: "Stipendium Hungaricum scholar studying core computer science: programming, discrete mathematics, operating systems, data structures and algorithms, and databases.",
+      descBullets: ["Grade average 5.0 out of 5.0"]
     }
   ]
 };
@@ -125,8 +132,16 @@ const techStack = {
 // Work experience section
 
 const workExperiences = {
-  display: false, //Set it to true to show workExperiences Section
-  experience: []
+  display: true, //Set it to true to show workExperiences Section
+  experience: [
+    {
+      role: "Co-founder & Manager",
+      company: "Genesis Inc.",
+      companylogo: genesisLogo,
+      date: "July 2020 – Present",
+      desc: "Co-founded and manage a nonprofit in Bangladesh that collects and distributes food and clothing donations to people in need."
+    }
+  ]
 };
 
 /* Your Open Source Section to View Your Github Pinned Projects
@@ -140,20 +155,60 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Projects",
-  subtitle: "THINGS I HAVE BUILT WHILE LEARNING",
-  projects: [],
-  display: false // Set false to hide this section, defaults to true
+  title: "Research",
+  subtitle: "WHAT I AM WORKING ON NOW",
+  projects: [
+    {
+      projectName:
+        "Does residual fusion help generalization to unseen generators?",
+      projectDesc:
+        "In progress. A fusion-depth analysis of combining SRM noise residuals with RGB images for detecting AI-generated images, focused on generators the model never saw in training."
+    }
+  ],
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
-  subtitle: "",
-  achievementsCards: [],
-  display: false // Set false to hide this section, defaults to true
+  title: emoji("Certifications 🏆 "),
+  subtitle: "Industry certifications and courses I have completed",
+  achievementsCards: [
+    {
+      title: "IT Specialist – Python",
+      subtitle:
+        "Certiport · March 2026. IT Specialist certification in Python, scored 780 out of 1000.",
+      image: certPython,
+      imageAlt: "Certiport IT Specialist Python",
+      footerLink: []
+    },
+    {
+      title: "Azure Data Fundamentals (DP-900)",
+      subtitle:
+        "Microsoft · June 2026. Covers core data concepts and data services on Azure.",
+      image: certDp900,
+      imageAlt: "Microsoft DP-900",
+      footerLink: []
+    },
+    {
+      title: "Generative AI with Diffusion Models",
+      subtitle:
+        "NVIDIA Deep Learning Institute · October 2025. Building and training diffusion models for image generation.",
+      image: certDiffusion,
+      imageAlt: "NVIDIA Generative AI with Diffusion Models",
+      footerLink: []
+    },
+    {
+      title: "Fundamentals of Accelerated Data Science",
+      subtitle:
+        "NVIDIA Deep Learning Institute · November 2025. Speeding up data science workflows with GPUs.",
+      image: certRapids,
+      imageAlt: "NVIDIA Fundamentals of Accelerated Data Science",
+      footerLink: []
+    }
+  ],
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Blogs Section

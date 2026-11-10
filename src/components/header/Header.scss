@@ -51,6 +51,7 @@
 }
 
 .header .logo {
+  color: $buttonColor;
   display: block;
   flex: none;
   float: left;
@@ -61,7 +62,7 @@
 }
 
 .header .logo-name {
-  font-family: "Agustina Regular";
+  font-family: "Sora", sans-serif;
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;

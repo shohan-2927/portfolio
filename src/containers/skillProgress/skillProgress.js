@@ -1,4 +1,5 @@
 import React from "react";
+import skillImg from "../../assets/images/skill.svg";
 import "./Progress.scss";
 import {illustration, techStack} from "../../portfolio";
 import {Fade} from "react-reveal";
@@ -31,10 +32,7 @@ export default function StackProgress() {
             {illustration.animated ? (
               <DisplayLottie animationData={Build} />
             ) : (
-              <img
-                alt="Skills"
-                src={require("../../assets/images/skill.svg")}
-              />
+              <img alt="Skills" src={skillImg} />
             )}
           </div>
         </div>

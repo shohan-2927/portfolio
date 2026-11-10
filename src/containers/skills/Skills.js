@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import developerActivityImg from "../../assets/images/developerActivity.svg";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";
@@ -20,10 +21,7 @@ export default function Skills() {
             {illustration.animated ? (
               <DisplayLottie animationData={codingPerson} />
             ) : (
-              <img
-                alt="Man Working"
-                src={require("../../assets/images/developerActivity.svg")}
-              ></img>
+              <img alt="Man Working" src={developerActivityImg}></img>
             )}
           </div>
         </Fade>
